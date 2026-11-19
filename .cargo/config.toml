@@ -1,0 +1,4 @@
+# Exe ma działać bez DLL z MSYS2 (tak samo jak w sdroxide).
+# Budowanie: C:\msys64\mingw64\bin musi być w PATH, bo crate'y windows wołają dlltool.
+[target.x86_64-pc-windows-gnu]
+rustflags = ["-C", "link-arg=-static-libgcc"]
